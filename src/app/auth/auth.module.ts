@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes = [
     {
@@ -12,7 +13,7 @@ const routes = [
 ];
 
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(routes)],
+    imports: [CommonModule, RouterModule.forChild(routes), ReactiveFormsModule],
     declarations: [RegisterComponent],
 })
 export class AuthModule {}
