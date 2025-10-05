@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GlobalFeedComponent } from './components/globalFeed.component';
 import { RouterModule } from '@angular/router';
-import { FeedComponent } from '../shared/modules/feed/components/feed/feed.component';
+import { FeedModule } from '../shared/modules/feed/feed.module';
 
 const routes = [
     {
@@ -12,8 +12,7 @@ const routes = [
 ];
 
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(routes)],
-    declarations: [GlobalFeedComponent, FeedComponent],
-    providers: [],
+    imports: [CommonModule, RouterModule.forChild(routes), FeedModule],
+    declarations: [GlobalFeedComponent],
 })
 export class GlobalFeedModule {}
