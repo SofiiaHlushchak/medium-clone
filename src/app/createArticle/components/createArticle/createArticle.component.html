@@ -1,1 +1,5 @@
-<mc-article-form></mc-article-form>
+<mc-article-form
+    [initialValues]="initialValues"
+    [isSubmitting]="(isSubmitting$ | async) ?? false"
+    [errors]="backendErrors$ | async"
+    (articleSubmit)="onSubmit($event)"></mc-article-form>
